@@ -39,7 +39,8 @@ pub struct Contender <T, V: Solution> {
 }
 
 impl<T, V: Solution> Contender<T, V> {
-    pub fn new(solution: V) -> Self {
+    pub fn new(random_solution: fn() -> V) -> Self {
+        let solution = random_solution();
         let fitness = solution.calc_fitness();
         Contender{fitness, solution}
     }
