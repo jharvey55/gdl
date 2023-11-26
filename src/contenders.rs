@@ -58,3 +58,11 @@ pub struct Population<T, V: Solution> {
     eval_count: i64,
     pop_size: usize,
 }
+
+impl<T,V: Solution>  From<Vec<Contender<T, V>>> for Population<T, V> {
+    fn from(members: Vec<Contender<T, V>>) -> Self {
+        let pop_size = members.size();
+        let eval_count = 0;
+        Population { members, eval_count, pop_size}
+    }
+}
