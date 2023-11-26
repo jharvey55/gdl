@@ -79,7 +79,7 @@ impl<T, V: Solution> Population<T, V> {
     pub fn new(random_solution: fn() -> V, pop_size: usize) -> Self {
         let seed = Contender::new(random_solution);
         let mut members = vec![seed];
-        for i in 1..pop_size {
+        for _i in 1..pop_size {
             members.push(Contender::new(random_solution));
         }
         let eval_count: i64 = i64::from(pop_size);
