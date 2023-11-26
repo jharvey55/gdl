@@ -53,6 +53,13 @@ impl<T, V: Solution> Contender<T, V> {
     }
 }
 
+impl<T, V: Solution> From<V> for Contender<T, V> {
+    fn from(solution: V) -> Self {
+        let fitness = solution.calc_fitness();
+        Contender{fitness, solution}
+    }
+}
+
 pub struct Population<T, V: Solution> {
     members: Vec<Contender<T, V>>,
     eval_count: i64,
