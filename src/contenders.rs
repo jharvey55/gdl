@@ -43,4 +43,12 @@ impl<T, V: Solution> Contender<T, V> {
         let fitness = solution.calc_fitness();
         Contender{fitness, solution}
     }
+
+    pub fn get_fitness(&self) -> f64 {
+        self.fitness.clone()
+    }
+
+    pub fn get_solution(&self) -> V {
+        self.solution.clone()
+    }
 }
