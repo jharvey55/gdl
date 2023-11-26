@@ -85,4 +85,8 @@ impl<T, V: Solution> Population<T, V> {
         let eval_count: i64 = i64::from(pop_size);
         Population {members, eval_count, pop_size}
     }
+
+    pub fn rank_by_fitness(&mut self) {
+        self.members.sort_by(|a, b| b.get_fitness().partial_cmp(&a.get_fitness()).unwrap());
+    }
 }
