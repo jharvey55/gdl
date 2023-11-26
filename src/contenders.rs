@@ -89,4 +89,8 @@ impl<T, V: Solution> Population<T, V> {
     pub fn rank_by_fitness(&mut self) {
         self.members.sort_by(|a, b| b.get_fitness().partial_cmp(&a.get_fitness()).unwrap());
     }
+
+    pub fn increment_eval_count(&mut self) {
+        self.eval_count += 1;
+    }
 }
