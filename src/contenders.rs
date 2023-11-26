@@ -52,3 +52,9 @@ impl<T, V: Solution> Contender<T, V> {
         self.solution.clone()
     }
 }
+
+pub struct Population<T, V: Solution> {
+    members: Vec<Contender<T, V>>,
+    eval_count: i64,
+    pop_size: usize,
+}
