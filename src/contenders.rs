@@ -93,4 +93,16 @@ impl<T, V: Solution> Population<T, V> {
     pub fn increment_eval_count(&mut self) {
         self.eval_count += 1;
     }
+
+    pub fn get_eval_count(&self) -> i64 {
+        self.eval_count
+    }
+
+    pub fn get_members(&self) -> Vec<Contender<T, V>> {
+        self.members.clone()
+    }
+
+    pub fn get_pop_size(&self) -> usize {
+        self.pop_size
+    }
 }
