@@ -32,3 +32,8 @@ pub trait Solution {
         panic!("Trait not implemented for this struct")
     }
 }
+
+pub struct Contender <T, V: Solution> {
+    fitness: T,
+    solution: V,
+}
