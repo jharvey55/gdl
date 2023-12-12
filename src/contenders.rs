@@ -24,7 +24,7 @@ pub trait Solution {
         panic!("Trait not implemented for this struct");
     }
 
-    fn calc_similarity(&self, other: &Self) -> f64 {
+    fn deep_similarity(&self, other: &Self) -> f64 {
         panic!("Trait not implemented for this struct")
     }
 
