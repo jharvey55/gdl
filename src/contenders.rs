@@ -8,7 +8,7 @@ pub trait Solution {
 
 
     // dependent constructors
-    fn new(source: &Self::Item) -> Self;
+    fn from(source: &Self::Item) -> Self;
 
     fn create_mutant(parent: &Self) -> Self;
     fn crossover(parent1: &Self, parent2: &Self) -> (Self, Self);
