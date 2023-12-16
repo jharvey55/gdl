@@ -28,11 +28,11 @@ pub trait Contender {
         panic!("Trait not implemented for this struct");
     }
 
-    fn deep_similarity(&self, other: &Self) -> f64 {
+    fn deep_similarity(one: &Self, two: &Self) -> f64 {
         panic!("Trait not implemented for this struct")
     }
 
-    fn fast_similarity(&self, other: &Self) -> f64 {
+    fn fast_similarity(one: &Self, two: &Self) -> f64 {
         panic!("Trait not implemented for this struct")
     }
 }
