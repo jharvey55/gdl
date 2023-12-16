@@ -18,6 +18,10 @@ pub trait Solution {
     fn create_log_string(&self) -> String;
     fn calc_fitness(&self) -> Self::Fitness;
 
+    fn fitness(&self) -> Self::Fitness;
+
+    fn solution(&self) -> Self::Item;
+
 
     // Optional/Default Functionality
     fn dominates(&self, other: &Self) -> bool {
