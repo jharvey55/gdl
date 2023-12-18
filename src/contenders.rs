@@ -74,7 +74,7 @@ impl<V: Contender> Population<V> {
         self.eval_count
     }
 
-    pub fn get_members(&self) -> Vec<V> {
+    pub fn members(&self) -> Vec<V> {
         self.members.clone()
     }
 
