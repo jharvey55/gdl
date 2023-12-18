@@ -52,11 +52,11 @@ impl<V: Contender>  From<Vec<V>> for Population<V> {
 }
 
 impl<V: Contender> Population<V> {
-    pub fn new(random_solution: fn() -> V, pop_size: usize) -> Self {
-        let seed = Contender::new(random_solution);
-        let mut members = vec![seed];
+    pub fn new(pop_size: usize) -> Self {
+
+        let mut members: Vec<V> = Vec::new();
         for _i in 1..pop_size {
-            members.push(Contender::new(random_solution));
+            members.push(V::random_solution());
         }
         let eval_count: i64 = i64::from(pop_size);
         Population {members, eval_count, pop_size}
