@@ -70,7 +70,7 @@ impl<V: Contender> Population<V> {
         self.eval_count += 1;
     }
 
-    pub fn get_eval_count(&self) -> i64 {
+    pub fn eval_count(&self) -> i64 {
         self.eval_count
     }
 
