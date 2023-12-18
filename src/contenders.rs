@@ -78,7 +78,7 @@ impl<V: Contender> Population<V> {
         self.members.clone()
     }
 
-    pub fn get_pop_size(&self) -> usize {
+    pub fn pop_size(&self) -> usize {
         self.pop_size
     }
 }
