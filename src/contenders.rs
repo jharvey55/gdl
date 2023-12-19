@@ -63,6 +63,7 @@ impl<V: Contender> Population<V> {
     }
 
     pub fn rank_by_fitness(&mut self) {
+        // TODO: Need to fix for pareto sort
         self.members.sort_by(|a, b| b.get_fitness().partial_cmp(&a.get_fitness()).unwrap());
     }
 
