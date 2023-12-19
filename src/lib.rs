@@ -1,5 +1,6 @@
 mod contenders;
 mod experiment;
+mod optimizers;
 
 pub fn add(left: usize, right: usize) -> usize {
     left + right
