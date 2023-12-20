@@ -38,7 +38,7 @@ pub trait Contender {
 }
 
 pub struct Population<V: Contender> {
-    members: Vec<V>,
+    pub members: Vec<V>,
     eval_count: i64,
     pop_size: usize,
 }
