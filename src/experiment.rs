@@ -2,6 +2,14 @@ use super::contenders::*;
 
 // Optimizer functions
 
+enum GenMethod<V> where V: Contender,
+{
+    Random,
+    RMHC,
+    GA,
+    Custom((String, fn(pop: &mut Population<V>)))
+}
+
 pub fn random_generation<V>(pop: &mut Population<V>) {
     for mut member in pop.members.iter() {
         member = V::random_solution();
