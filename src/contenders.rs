@@ -84,6 +84,10 @@ impl<V: Contender> Population<V> {
         self.members.clone()
     }
 
+    pub fn repopulate(&mut self, new_members: Vec<V>) {
+        self.members = new_members;
+    }
+
 
     pub fn pop_size(&self) -> usize {
         self.pop_size
