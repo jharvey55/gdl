@@ -61,6 +61,11 @@ impl<V: Contender> Population<V> {
         let eval_count: i64 = i64::from(pop_size);
         Population {members, eval_count, pop_size}
     }
+    pub fn from(source: Vec<V>) -> Self {
+        let pop_size = source.size();
+        let eval_count: i64 = i64::from(pop_size);
+        Population {members: source, eval_count, pop_size}
+    }
 
     pub fn rank_by_fitness(&mut self) {
         // TODO: Need to fix for pareto sort
@@ -78,6 +83,7 @@ impl<V: Contender> Population<V> {
     pub fn members(&self) -> Vec<V> {
         self.members.clone()
     }
+
 
     pub fn pop_size(&self) -> usize {
         self.pop_size
