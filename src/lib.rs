@@ -2,6 +2,8 @@ mod contenders;
 mod experiment;
 mod optimizers;
 
+mod metrics;
+
 pub fn add(left: usize, right: usize) -> usize {
     left + right
 }
